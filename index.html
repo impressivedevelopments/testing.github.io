@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Тестирование</title>
+</head>
+<body>
+    
+    <div class="panel" id="start">
+        <div class="panel-header">
+            Добро пожаловать в систему тестирования!            
+        </div>
+        <div class="panel-body">
+            Вам будут выданы задания, которые предстоит выполнить 
+            за отведенное время. <br>
+            В конце тестирования Вы сможете ознакомиться с результатами. 
+        </div>
+        <button onclick="startTest()">Пройти тест</button>
+        <div class="panel-footer">
+            
+        </div>
+    </div>
+
+    <div class="panel hidden" id="testing">
+        <div class="panel-header">            
+        </div>
+        <div class="panel-body">
+            <div class="panel-body-form">
+                <div class="panel-body-form-control">
+                    <input type="radio" name="answer" id="answer-1">
+                    <label for="answer-1"></label>
+                </div>
+                <div class="panel-body-form-control">
+                    <input type="radio" name="answer" id="answer-2">
+                    <label for="answer-2"></label>
+                </div>
+                <div class="panel-body-form-control">
+                    <input type="radio" name="answer" id="answer-3">
+                    <label for="answer-3"></label>
+                </div>
+                <div class="panel-body-form-control">
+                    <input type="radio" name="answer" id="answer-4">
+                    <label for="answer-4"></label>
+                </div>               
+                
+                <button onclick="nextTask()">Следующий вопрос</button>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="panel-footer-counter">Вопрос  
+                <span class="current-question"></span> из 
+                <span class="total-questions"></span>
+            </div>
+            <div class="panel-footer-timer"></div>
+        </div>
+    </div>
+
+    <div class="panel hidden" id="results">
+        <div class="panel-header">
+            Вы прошли тест на <span></span> %            
+        </div>
+        <div class="panel-body">
+            <div class="panel-body-form">
+                <div class="panel-body-form-control">
+                    
+                </div>              
+                
+                <button onclick="newTesting()">Начать тест заново</button>
+            </div>
+        </div>
+        <div class="panel-footer">
+            
+        </div>
+    </div>
+
+    <script src="js/tasks.json"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
